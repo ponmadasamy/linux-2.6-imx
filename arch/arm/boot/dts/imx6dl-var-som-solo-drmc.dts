@@ -13,10 +13,9 @@
 
 #include "imx6dl.dtsi"
 #include "imx6qdl-var-som.dtsi"
-#include "imx6qdl-var-solocb-dt6cb-displays.dtsi"
 
 / {
-	model = "Variscite i.MX6 DL/Solo SOM-SOLO SOM-DUAL DRMC";
+	model = "Variscite i.MX6 DL/Solo SOM-SOLO DRMC";
 	compatible = "fsl,imx6q-var-som", "fsl,imx6q";
 };
 
@@ -61,17 +60,12 @@
 	fsl,ldo-bypass = <0>;
 };
 
-&touch {
-	interrupt-parent = <&gpio5>;
-	interrupts = <17 0>;
-	focaltech,irq-gpio = <&gpio5 17 0x00>;
-};
-
 &usdhc2 {	/* uSDHC2, MMC/SD card */
 	wp-gpios = <>;
 };
 
 &mxcfb1 {
+	interface_pix_fmt = "RGB24";
 	status = "okay";
 };
 
