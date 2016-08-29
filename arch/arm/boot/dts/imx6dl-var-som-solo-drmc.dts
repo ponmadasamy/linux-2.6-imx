@@ -111,10 +111,16 @@
 	mpu6050@68 {
 		compatible = "invensense,mpu6050";
 		reg = <0x68>;
-		orientation = [FF 00 00 00 FF 00 00 00 FF];
+		interrupt-parent = <&gpio1>;
+		interrupts = <7 2>;
+		invensense,int_config = <0x10>;
+		invensense,level_shifter = <0>;
+		invensense,orientation = [01 00 00 00 01 00 00 00 01];
+		invensense,sec_slave_type = <0>;
+		invensense,key = [4e cc 7e eb f6 1e 35 22 00 34 0d 65 32 e9 94 89];
 		status = "okay";	
 	};
-	pressure@77 {
+	bmp085@77 {
 		compatible = "bosch,bmp085";
 		reg = <0x77>;
 		chip-id = <10>;
@@ -193,3 +199,7 @@
 	};
 };
 
+
+&can1 {
+	status = "disabled";
+};
