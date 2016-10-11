@@ -948,8 +948,11 @@ CONFIG_WIRELESS=y
 # CFG80211 needs to be enabled for MAC80211
 #
 # CONFIG_WIMAX is not set
-# CONFIG_RFKILL is not set
+CONFIG_RFKILL=y
+CONFIG_RFKILL_LEDS=y
+# CONFIG_RFKILL_INPUT is not set
 # CONFIG_RFKILL_REGULATOR is not set
+# CONFIG_RFKILL_GPIO is not set
 # CONFIG_NET_9P is not set
 # CONFIG_CAIF is not set
 # CONFIG_CEPH_LIB is not set
@@ -1583,6 +1586,7 @@ CONFIG_USB_NET_ZAURUS=m
 # CONFIG_USB_NET_CX82310_ETH is not set
 # CONFIG_USB_NET_KALMIA is not set
 # CONFIG_USB_NET_QMI_WWAN is not set
+CONFIG_USB_HSO=y
 # CONFIG_USB_NET_INT51X1 is not set
 # CONFIG_USB_IPHETH is not set
 # CONFIG_USB_SIERRA_NET is not set
@@ -3611,6 +3615,7 @@ CONFIG_STAGING=y
 # CONFIG_RTLLIB is not set
 # CONFIG_R8712U is not set
 # CONFIG_R8188EU is not set
+# CONFIG_R8723AU is not set
 # CONFIG_RTS5208 is not set
 
 #
