@@ -95,6 +95,7 @@
         rtc@0x68 {
 		compatible = "dallas,ds1339";
                 reg = <0x68>;
+		trickle-resistor-ohms = <2000>;
 		status = "okay";
         };
 	lm75b@48 {
